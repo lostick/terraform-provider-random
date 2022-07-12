@@ -288,7 +288,7 @@ func TestAccResourceString_LengthErrors(t *testing.T) {
   							length = 2
   							min_lower = 3
 						}`,
-				ExpectError: regexp.MustCompile(`.*Attribute "length" \(2\) cannot be less than min_upper \+ min_lower \+\nmin_numeric \+ min_special \(3\).`),
+				ExpectError: regexp.MustCompile(`.*Attribute "length" \(2\) cannot be less than `),
 			},
 			{
 				Config: `resource "random_string" "invalid_length" {
